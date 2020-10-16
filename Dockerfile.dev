@@ -1,0 +1,12 @@
+FROM node:10.16.3
+
+EXPOSE 3002
+COPY ["./package.json", "./package-lock.json", "./.eslintrc.js", "./.eslintignore", "./babel.config.js", "./vue.config.js", "/app/"]
+
+WORKDIR /app
+
+VOLUME "/app/src"
+
+RUN npm i --quiet
+
+CMD npm run start
