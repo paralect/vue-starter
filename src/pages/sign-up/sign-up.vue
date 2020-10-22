@@ -30,7 +30,7 @@
         ref="signUpForm"
         :model="form"
         :rules="rules"
-        @finish="handleSumbit"
+        @finish="handleSubmit"
       >
         <h1 class="title">
           Sign Up
